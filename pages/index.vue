@@ -122,7 +122,7 @@
                                                         <b-form-input
                                                                 class="mb-3"
                                                                 type="password"
-                                                                v-model="formnewPassword"
+                                                                v-model="formNewPassword"
                                                                 :state="errors[0] ? false : (valid ? true : null)"
                                                                 placeholder="New password">
                                                         </b-form-input>
@@ -171,6 +171,7 @@
                 token: '',
                 submitStatus: null,
                 formcurrentPassword: '',
+                formNewPassword: '',
                 formemail: '',
                 alertmessage: '',
                 variant: '',
@@ -217,7 +218,7 @@
 
                         email: this.$auth.$state.user.user.email,
                         currentPassword: this.formcurrentPassword,
-                        newPassword: this.formpassword,
+                        newPassword: this.formNewPassword,
                         userId: this.$auth.$state.user.user._id,
 
 

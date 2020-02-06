@@ -29,8 +29,6 @@ export const actions = {
         localStorage.clear();
         sessionStorage.clear();
         this.$router.push('/login')
-
-
     },
     async signup({commit, state}, {email, password, roles}) {
         try {
@@ -50,10 +48,8 @@ export const actions = {
             if (error.response && error.response.status === 401) {
                 throw new Error('Bad credentials')
             }
-
             throw error
         }
-
     },
     async changepassword({commit, state}, {email, currentPassword, newPassword}) {
 
@@ -66,8 +62,6 @@ export const actions = {
 
 
             })
-            let {data} =    await this.$axios.get(`http://localhost:9000/api/users/me`);
-            commit('SET_USER', data)
 
         } catch (error) {
             if (error.response && error.response.status === 401) {
@@ -93,7 +87,7 @@ export const actions = {
                 data: {
                     email: newEmail,
                     password: password,
-                    rememberMe : false
+                    rememberMe: false
                 }
             })
 
@@ -104,17 +98,6 @@ export const actions = {
 
             throw error
         }
-
     },
-
-
-}
-
-
-export const getters = {
-
-
-
-
 }
 

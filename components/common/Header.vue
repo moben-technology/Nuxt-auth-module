@@ -31,18 +31,7 @@
 <script>
 
     export default {
-        components: {
 
-        },
-        data() {
-            return {
-                user: null,
-                formemail: '',
-                formpassword: '',
-                formrememberme: false,
-                formError: null
-            }
-        },
         methods: {
             async logout() {
                 try {

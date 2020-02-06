@@ -109,9 +109,6 @@
             },
             async signup() {
                 let vm = this
-
-
-
                 try {
                     await this.$store.dispatch('signup', {
 
@@ -119,9 +116,7 @@
                         password: this.formpassword,
                         userType: this.formtype,
                         roles: [""],
-
-
-                    }).then(() => {
+                        }).then(() => {
                         this.$auth.loginWith('local', {
                                 data: {
                                     email: this.formemail,

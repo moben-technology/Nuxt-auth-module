@@ -61,11 +61,14 @@ module.exports = {
     extend (config, ctx) {
     }
   },
+    axios: {
+        baseURL: 'http://localhost:9000/api'
+    },
     auth: {
         strategies: {
             local: {
                 endpoints: {
-                    login: { url: 'http://localhost:9000/api/signin', method: 'post', propertyName: 'token' },
+                    login: { url: '/signin', method: 'post', propertyName: 'token' },
                     logout: false,
                     user: { url: 'http://localhost:9000/api/users/me', propertyName: false },
                 },

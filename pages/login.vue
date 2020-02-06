@@ -44,7 +44,7 @@
                                                         placeholder="Mot de passe ...">
                                                 </b-form-input>
                                                 <b-form-invalid-feedback id="inputLiveFeedback">
-Password is required
+                                                Password is required
                                                 </b-form-invalid-feedback>
                                             </b-form-group>
                                         </ValidationProvider>
@@ -92,7 +92,7 @@ Header,
                 dismissCountDown: 0,
             }
         },
-        //  middleware : 'notAuthenticated',
+        middleware : 'notAuthenticated',
 
         methods: {
             showAlert(message, variant) {
